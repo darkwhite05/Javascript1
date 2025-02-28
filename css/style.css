@@ -302,6 +302,7 @@ nav {
 .profile-img:hover {
   transform: scale(1.1);
 }
+
 /* Sections */
 .container {
   padding: 4em 2em;
@@ -344,6 +345,64 @@ nav {
 }
 .project-card:hover {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+/* Video Section */
+#video {
+  position: relative;
+  width: 100%;
+  min-height: 400px; /* Ensure it's tall enough */
+  padding: 80px 0;
+  background: url("../images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+/* Overlay Effect for Better Readability */
+#video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+  z-index: 1;
+}
+
+/* Ensuring Text is Above Overlay */
+#video h2 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* YouTube Video Styling */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 5px solid #efefec; /* Yellow border */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .video-container {
+    width: 90%;
+  }
 }
 
 /* Contact Form */
