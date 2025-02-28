@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
   window.moveSlide = function (n) {
     slideIndex += n;
     showSlide(slideIndex);
-    resetAutoSlide(); 
+    resetAutoSlide();
   };
 
   function showSlide(index) {
-    if (!slidesContainer) return; 
+    if (!slidesContainer) return;
 
     if (index >= slides.length) slideIndex = 0;
     if (index < 0) slideIndex = slides.length - 1;
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
 
     dots.forEach((dot) => dot.classList.remove("active"));
-    dots[slideIndex]?.classList.add("active"); 
+    dots[slideIndex]?.classList.add("active");
   }
 
   function startAutoSlide() {
@@ -75,6 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
+    const namePattern = /^[A-Za-z\s]+$/; 
+
+    if (!name.match(namePattern)) {
+      alert("Please enter a valid name.");
+      formMessage.innerText = "Invalid name. Use letters only.";
+      formMessage.style.color = "red";
+      return;
+    }
 
     if (name && email && message) {
       alert(`Thank you, ${name}! Your message has been sent.`);
