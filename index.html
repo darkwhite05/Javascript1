@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark’s DevHub</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#"
+            ><img class="logo-img" src="images/logo.jpg" alt="Logo" /> Mark’s
+            DevHub</a
+          >
+        </div>
+        <button class="menu-toggle">☰</button>
+        <!-- Hamburger Menu Button -->
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- Ensure this exists -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/banner1.jpg" alt="Slide 1" />
+            <div class="text">
+              <h1>Welcome to Mark’s DevHub</h1>
+              <p>Showcasing my web development projects.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/banner2.jpg" alt="Slide 2" />
+            <div class="text">
+              <h1>Explore My Work</h1>
+              <p>Creative and responsive web design projects.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/banner3.jpg" alt="Slide 3" />
+            <div class="text">
+              <h1>Building The Future</h1>
+              <p>Innovative solutions with HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+
+        <!-- Dots for Navigation -->
+        <div class="dots-container">
+          <span class="dot" onclick="currentSlide(0)"></span>
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="container">
+        <div class="about-content">
+          <img
+            src="images/profile.jpg"
+            alt="Mark Profile"
+            class="profile-img"
+          />
+          <div class="text-content">
+            <h1>
+              Hi, I'm
+              <a href="https://www.linkedin.com/in/peyn05/" target="_blank"
+                >Mark Galindes</a
+              >
+            </h1>
+            <p>
+              I'm a passionate **Web Developer** and **AI Coach** currently
+              honing my skills in <em>**HTML, CSS, and JavaScript**</em>. I specialize in
+              building clean, responsive, and interactive websites.
+            </p>
+            <p>
+              My goal is to create impactful digital experiences and help others
+              understand **AI technologies**. Whether it's a simple landing page
+              or a complex project, I enjoy turning ideas into reality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/Project1.jpg" alt="One Piece Fan Site" />
+          <a href="https://darkwhite05.github.io/html_project2/" target="_blank"
+            ><h3>One Piece Fan Site</h3></a
+          >
+          <p>
+            An interactive fan site dedicated to One Piece, featuring character
+            bios, story arcs, and exciting visuals.
+          </p>
+        </div>
+        <div class="project-card">
+          <img src="images/project2.jpg" alt="Gundam Fan Site" />
+          <a href="https://darkwhite05.github.io/gundam/" target="_blank"
+            ><h3>Gundam Fan Site</h3></a
+          >
+          <p>
+            A tribute site for Gundam enthusiasts, showcasing different mecha
+            series, model kits, and history.
+          </p>
+        </div>
+        <div class="project-card">
+          <img src="images/project3.jpg" alt="My Portfolio" />
+          <a href="https://darkwhite05.github.io/Portfolio1/" target="_blank"
+            ><h3>My Portfolio</h3></a
+          >
+          <p>
+            A personal portfolio website displaying my skills, projects, and
+            journey as a web developer.
+          </p>
+        </div>
+        <div class="project-card">
+          <img src="images/project4.jpg" alt="Portfolio Project" />
+          <a href="https://darkwhite05.github.io/Portfolio/" target="_blank"
+            ><h3>Portfolio Project</h3></a
+          >
+          <p>
+            A modern and responsive portfolio template designed to highlight
+            creative projects and professional work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <button type="button" id="clearForm">Clear</button>
+        <!-- Clear button -->
+      </form>
+      <p id="formMessage"></p>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 Allrights Reserved | Developed by
+        <span
+          ><a href="https://www.facebook.com/peyn05/" target="_blank  ">
+            Mark Gerald Galindes<br /><br /></a></span
+        >A Project for Javasrcript
+      </p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
