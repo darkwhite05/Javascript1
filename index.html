@@ -8,26 +8,25 @@
   </head>
   <body>
     <!-- Navigation -->
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="#"
-            ><img class="logo-img" src="images/logo.jpg" alt="Logo" /> Mark’s
-            DevHub</a
-          >
-        </div>
-        <button class="menu-toggle">☰</button>
-        <!-- Hamburger Menu Button -->
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#video">Instructor</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <!-- Ensure this exists -->
-        </ul>
-      </nav>
-    </header>
+
+    <nav>
+      <div class="logo">
+        <button id="menuButton">
+          <img class="logo-img" src="images/logo.jpg" alt="Logo" /> Mark’s
+          DevHub<span class="hamburger">&#9776;</span>
+        </button>
+      </div>
+      <ul id="menu" style="display: none">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#video">Instructor</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#dynamic-content">Q&A</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Ensure this exists -->
+      </ul>
+    </nav>
 
     <!-- Hero Section with Slider -->
     <section class="hero">
@@ -70,6 +69,7 @@
 
     <!-- About Me Section -->
     <section id="about">
+      <h2>About</h2>
       <div class="container">
         <div class="about-content">
           <img
@@ -85,15 +85,14 @@
               >
             </h1>
             <p>
-              I'm a passionate <strong>Web Developer</strong> currently
-              honing my skills in <em>HTML, CSS, and JavaScript</em>. I
-              specialize in building clean, responsive, and interactive
-              websites.
+              I'm a passionate <strong>Web Developer</strong> currently honing
+              my skills in <em>HTML, CSS, and JavaScript</em>. I specialize in
+              building clean, responsive, and interactive websites.
             </p>
             <p>
               My goal is to create impactful digital experiences and help others
-              understand <em>AI technologies</em>. Whether it's a simple landing page
-              or a complex project, I enjoy turning ideas into reality.
+              understand <em>AI technologies</em>. Whether it's a simple landing
+              page or a complex project, I enjoy turning ideas into reality.
             </p>
           </div>
         </div>
@@ -160,6 +159,112 @@
         >
         </iframe>
       </div>
+    </section>
+    <section id="products">
+      <h2>Buy Collections</h2>
+
+      <div class="products-grid">
+        <div class="product-container">
+          <img
+            src="images/gundam_gallery1.jpg"
+            alt="Product Image"
+            class="product-img"
+          />
+          <div class="product-details">
+            <h3>Gundam 1</h3>
+            <p>Price: ₱989</p>
+            <div class="quantity-controls">
+              <button class="decrement">-</button>
+              <span class="quantity">1</span>
+              <button class="increment">+</button>
+            </div>
+            <p>Price: <span class="total-price">₱989</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <img
+            src="images/gundam_gallery2.jpg"
+            alt="Product Image"
+            class="product-img"
+          />
+          <div class="product-details">
+            <h3>Gundam 2</h3>
+            <p>Price: ₱527</p>
+            <div class="quantity-controls">
+              <button class="decrement">-</button>
+              <span class="quantity">1</span>
+              <button class="increment">+</button>
+            </div>
+            <p>Price: <span class="total-price">₱527</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <img
+            src="images/gundam_gallery3.jpg"
+            alt="Product Image"
+            class="product-img"
+          />
+          <div class="product-details">
+            <h3>Gundam 3</h3>
+            <p>Price: ₱878</p>
+            <div class="quantity-controls">
+              <button class="decrement">-</button>
+              <span class="quantity">1</span>
+              <button class="increment">+</button>
+            </div>
+            <p>Price: <span class="total-price">₱878</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <img
+            src="images/gundam_gallery4.jpg"
+            alt="Product Image"
+            class="product-img"
+          />
+          <div class="product-details">
+            <h3>Gundam 4</h3>
+            <p>Price: ₱1080</p>
+            <div class="quantity-controls">
+              <button class="decrement">-</button>
+              <span class="quantity">1</span>
+              <button class="increment">+</button>
+            </div>
+            <p>Price: <span class="total-price">₱1080</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="product-container">
+          <img
+            src="images/gundam_gallery5.jpg"
+            alt="Product Image"
+            class="product-img"
+          />
+          <div class="product-details">
+            <h3>2 Gundam</h3>
+            <p>Price: ₱2500</p>
+            <div class="quantity-controls">
+              <button class="decrement">-</button>
+              <span class="quantity">1</span>
+              <button class="increment">+</button>
+            </div>
+            <p>Price: <span class="total-price">₱2500</span></p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dynamic-content">
+      <h2>Web Dev Fun Zone 😆</h2>
+      <button id="addParagraph">Tell Me a Coding Joke</button>
+      <div id="paragraphContainer"></div>
     </section>
 
     <!-- Contact Section -->
