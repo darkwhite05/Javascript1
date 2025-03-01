@@ -53,19 +53,82 @@ nav {
 
 /* Navigation Links */
 /* Navigation Bar */
+/* Style for the navigation menu */
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Ensures proper spacing */
-  padding: 15px 20px;
+  flex-direction: column;
+  align-items: center; /* Centers items */
   background: black;
   color: white;
+  padding: 15px 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure the menu button is aligned properly */
+.logo {
+  display: flex;
+  justify-content: center; /* Centers the button */
+  width: 100%;
+}
+
+/* Style the toggle button */
+#menuButton {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Menu Styling */
+#menu {
+  list-style: none;
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  align-items: center; /* Centers items */
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* Show menu when active */
+#menu.active {
+  display: flex;
+}
+
+/* Style the navigation links */
+#menu li {
+  margin: 10px 0;
+}
+
+#menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+#menu a:hover {
+  color: #ffcc00;
+}
+
+#menuButton:hover {
+  background-color: #ffcc00;
+  color: black;
 }
 
 /* Logo */
@@ -105,6 +168,37 @@ nav {
   flex-grow: 1; /* Allows it to take available space */
   gap: 20px;
   padding: 0;
+}
+/* Mobile Navigation */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Ensure button is visible */
+  }
+
+  .nav-links {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
 }
 
 /* Ensures each link is displayed properly */
@@ -150,11 +244,13 @@ nav {
     height: 100vh;
     padding-top: 20px;
     text-align: center;
+    list-style: none;
+    padding: 0;
     z-index: 1000;
   }
 
   .nav-links.active {
-    display: flex;
+    display: block;
   }
 
   .nav-links li {
@@ -162,7 +258,7 @@ nav {
   }
 
   .menu-toggle {
-    display: block;
+    display: none;
     font-size: 24px;
     cursor: pointer;
     color: white;
@@ -171,6 +267,7 @@ nav {
     outline: none;
     position: absolute;
     right: 20px;
+    border: none;
   }
 }
 
@@ -403,6 +500,93 @@ nav {
   .video-container {
     width: 90%;
   }
+}
+#products {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#products h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+  gap: 20px; /* Adds space between products */
+}
+
+.product-container {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-details h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.add-to-cart {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+}
+
+#dynamic-content {
+  text-align: center;
+  padding: 20px;
+}
+#dynamic-content {
+  background-color: black;
+}
+#dynamic-content h2 {
+  color: white;
+}
+#paragraphContainer p {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
 }
 
 /* Contact Form */
